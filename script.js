@@ -1,4 +1,3 @@
-```javascript
 // =========================
 // MOBILE MENU
 // =========================
@@ -14,7 +13,7 @@ menuBtn.addEventListener("click", () => {
 
 
 // =========================
-// CLOSE MENU
+// CLOSE MENU AFTER CLICK
 // =========================
 
 document.querySelectorAll(".nav-links a").forEach(link => {
@@ -29,12 +28,13 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
 // =========================
-// SCROLL ANIMATION
+// SCROLL REVEAL ANIMATION
 // =========================
 
-const cards = document.querySelectorAll(
+const animatedElements = document.querySelectorAll(
     ".about-card, .skill-card, .project-card, .timeline-item, .contact-card"
 );
+
 
 const observer = new IntersectionObserver(
 
@@ -59,15 +59,15 @@ const observer = new IntersectionObserver(
 );
 
 
-cards.forEach(card => {
+animatedElements.forEach(element => {
 
-    observer.observe(card);
+    observer.observe(element);
 
 });
 
 
 // =========================
-// ACTIVE NAVBAR
+// ACTIVE NAVIGATION
 // =========================
 
 const sections = document.querySelectorAll("section");
@@ -110,4 +110,3 @@ window.addEventListener("scroll", () => {
     });
 
 });
-```
